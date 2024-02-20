@@ -6,6 +6,7 @@ use MyProject\Services\Db;
 class UserActivationService
 {
     private const TABLE_NAME = 'users_activation_codes';
+    private const TABLE_NAME_USER = 'users';
 
     public static function createActivationCode(User $user): string
     {
@@ -34,5 +35,16 @@ class UserActivationService
         );
         return !empty($result);
     }
+    // public static function deleteCode(User $user): bool
+    // {
+    //     $db = Db::getInstance();
+    //     $db->query(
+    //         'DELETE FROM '. self::TABLE_NAME.'WHERE user_id = :user_id',
+    //     [
+    //         'user_id' => $user->getId()
+    //     ]
+    //     );
+    //     return true;
+    // }
 }
 ?>

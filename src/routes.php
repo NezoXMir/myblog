@@ -12,8 +12,14 @@ return [
 // Регистрация пользователей
     '~^users/register$~' => [\MyProject\Controllers\UsersController::class,'signUp'],
 
+//  Login пользователя
+    '~^users/login$~' => [\MyProject\Controllers\UsersController::class, 'login'],
+
 // Авторизация пользователя
     '~^users/(\d+)/activate/(.+)$~' => [\MyProject\Controllers\UsersController::class,'activate'],
+
+// Реализация разлогинивания
+    '~^users/logout$~' =>  [\MyProject\Controllers\UsersController::class,'logout'],
 
 // Удаление статьи
     '~^articles/(\d+)/delete$~' => [\MyProject\Controllers\ArticlesController::class, 'delete'],

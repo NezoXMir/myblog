@@ -4,7 +4,7 @@
         'host' => 'localhost',
         'dbname' => 'my_project10',
         'user' => 'root',
-        'password' => '',
+        'password' => 'Study-2@22',
     ]
     ];
 
